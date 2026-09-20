@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fusion Frontier Lab | 核融合研究</title>
+  <meta name="description" content="核融合研究の紹介と、開発中アプリへの入口をまとめたページです。" />
+  <style>
+    :root { --ink:#ecf5ff; --muted:#b6c7dc; --line:rgba(188,215,255,.22); --navy:#06172b; --blue:#1976d2; --cyan:#66e2ff; --panel:rgba(10,37,66,.74); }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); font-family:system-ui,-apple-system,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif; background:radial-gradient(circle at 78% 12%,#145797 0,transparent 30rem),radial-gradient(circle at 10% 75%,#0c5b63 0,transparent 25rem),var(--navy); line-height:1.7; }
+    main { width:min(1040px,calc(100% - 40px)); margin:auto; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:24px 0; border-bottom:1px solid var(--line); }
+    .brand { font-weight:750; letter-spacing:.05em; } .badge { font-size:.82rem; color:var(--cyan); border:1px solid rgba(102,226,255,.6); border-radius:999px; padding:.3rem .7rem; }
+    .hero { padding:7.5rem 0 5.5rem; max-width:770px; }
+    h1 { font-size:clamp(2.5rem,7vw,5.25rem); letter-spacing:-.06em; line-height:1.08; margin:0 0 1.5rem; }
+    h2 { font-size:clamp(1.5rem,3vw,2.2rem); line-height:1.25; margin:0 0 1rem; } p { color:var(--muted); font-size:1.05rem; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:2.2rem; }
+    .button { display:inline-block; padding:.88rem 1.2rem; border-radius:.65rem; text-decoration:none; font-weight:700; color:#001520; background:var(--cyan); }
+    .button.secondary { color:var(--ink); background:transparent; border:1px solid var(--line); }
+    .notice { color:#d4f7ff; font-size:.92rem; margin-top:1rem; }
+    section { padding:3rem 0; border-top:1px solid var(--line); }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:1.5rem; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:1rem; padding:1.35rem; }
+    .card h3 { margin:.1rem 0 .45rem; font-size:1.1rem; } .card p { margin:0; font-size:.95rem; }
+    .link-panel { background:linear-gradient(120deg,rgba(25,118,210,.26),rgba(102,226,255,.12)); border:1px solid rgba(102,226,255,.45); border-radius:1.25rem; padding:clamp(1.5rem,4vw,3rem); }
+    code { color:#d7f9ff; word-break:break-all; }
+    footer { padding:2.25rem 0 3rem; color:var(--muted); font-size:.88rem; }
+    @media (max-width:720px) { .grid { grid-template-columns:1fr; } .hero { padding:5rem 0 4rem; } header { align-items:flex-start; gap:1rem; flex-direction:column; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="brand">FUSION FRONTIER LAB</div>
+      <div class="badge">RESEARCH / PROTOTYPE</div>
+    </header>
+
+    <section class="hero">
+      <p>核融合の可能性を、理解・対話・実装へ。</p>
+      <h1>研究を、次のエネルギーの選択肢へ。</h1>
+      <p>核融合をめぐる研究の背景、社会との接点、そして開発中の体験型アプリを紹介します。専門家だけでなく、学び手・協働者・関心を持つすべての人の入口になることを目指します。</p>
+      <div class="actions">
+        <a class="button" href="https://fusion-frontier-lab.base44.app" target="_blank" rel="noopener noreferrer">開発中の核融合アプリを開く ↗</a>
+        <a class="button secondary" href="#potential">活用可能性を見る</a>
+      </div>
+      <p class="notice">※ アプリは開発途中です。内容や機能は予告なく変わることがあります。</p>
+    </section>
+
+    <section>
+      <h2>この研究サイトについて</h2>
+      <p>核融合研究の価値を、技術的な成果だけでなく、社会にとっての問いと可能性として届けます。アプリを使った探索を通じて、難しいテーマを自分ごととして考えるきっかけをつくります。</p>
+      <div class="grid">
+        <article class="card"><h3>研究の背景</h3><p>核融合が目指すエネルギー像と、現在取り組む課題をわかりやすく整理します。</p></article>
+        <article class="card"><h3>体験型アプリ</h3><p>開発中のアプリで、核融合に関する概念や可能性を探索できます。</p></article>
+        <article class="card"><h3>社会との対話</h3><p>研究・教育・産業をつなぐための視点と、今後の発展の方向性を考えます。</p></article>
+      </div>
+    </section>
+
+    <section id="potential">
+      <h2>マーケティングへの応用可能性</h2>
+      <div class="grid">
+        <article class="card"><h3>理解の入口をつくる</h3><p>アプリの利用を通じ、専門的な研究内容を短時間で直感的に届ける導線になります。</p></article>
+        <article class="card"><h3>関心のあり方を知る</h3><p>利用者がどのテーマに反応するかを観察し、広報・教育コンテンツの仮説づくりに役立てられます。</p></article>
+        <article class="card"><h3>協働のきっかけにする</h3><p>学校・企業・自治体との対話で、研究の応用先をともに考える共通の素材になります。</p></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="link-panel">
+        <h2>核融合アプリを試す</h2>
+        <p>実験的に公開しているアプリです。研究への関心を深める入口としてご利用ください。</p>
+        <p><a class="button" href="https://fusion-frontier-lab.base44.app" target="_blank" rel="noopener noreferrer">Fusion Frontier Lab を開く ↗</a></p>
+        <code>https://fusion-frontier-lab.base44.app</code>
+      </div>
+    </section>
+
+    <footer>© Fusion Frontier Lab · 核融合研究の紹介ページ</footer>
+  </main>
+</body>
+</html>
