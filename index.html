@@ -114,6 +114,16 @@
     .section-kicker { margin: 0 0 12px; color: var(--cyan); font-size: .68rem; font-weight: 700; letter-spacing: .2em; }
     h2 { margin: 0; font-size: clamp(1.9rem, 3.5vw, 3.15rem); font-weight: 550; letter-spacing: -.045em; line-height: 1.3; }
     .section-intro { max-width: 570px; margin: 0; color: var(--muted); font-size: .96rem; line-height: 1.95; }
+    .fusion-copy p { max-width: 620px; margin: 0; color: var(--muted); font-size: .96rem; line-height: 1.95; }
+    .fusion-copy p + p { margin-top: 16px; }
+    .maker-note {
+      display: grid; grid-template-columns: .8fr 1.2fr; gap: 24px; align-items: center;
+      margin-top: 32px; padding: 24px 27px;
+      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    }
+    .maker-note .section-kicker { margin-bottom: 8px; }
+    .maker-note h3 { margin: 0; font-size: 1.08rem; font-weight: 600; }
+    .maker-note p { margin: 0; color: var(--muted); font-size: .88rem; line-height: 1.9; }
     .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .card {
       min-height: 230px; padding: 27px 26px 25px;
@@ -165,6 +175,7 @@
       .signal { flex-direction: column; gap: 5px; font-size: .68rem; }
       section.content { padding-block: 68px; }
       .section-head { grid-template-columns: 1fr; gap: 18px; margin-bottom: 28px; }
+      .maker-note { grid-template-columns: 1fr; gap: 12px; padding: 22px 0; }
       .cards { grid-template-columns: 1fr; gap: 10px; }
       .card { min-height: auto; padding: 22px; }
       .card h3 { margin-top: 16px; }
@@ -188,7 +199,7 @@
       </a>
       <nav class="nav" aria-label="メインナビゲーション">
         <a href="#about">プロジェクト</a>
-        <a href="#possibilities">探究テーマ</a>
+        <a href="#fusion">核融合とは</a>
         <a class="nav-cta" href="#experience">アプリを体験 ↗</a>
       </nav>
     </header>
@@ -251,6 +262,19 @@
         <div class="signal"><b>03</b><span>一緒に考える</span></div>
       </div>
 
+      <section class="content" id="fusion" aria-labelledby="fusion-title">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">FUSION, SIMPLY</p>
+            <h2 id="fusion-title">核融合って、<br>なんだろう。</h2>
+          </div>
+          <div class="fusion-copy">
+            <p>核融合は、軽い原子核どうしが結びついて、より重い原子核になるときに生まれるエネルギーを利用しようとする研究です。太陽や星の光と熱も、核融合反応から生まれています。</p>
+            <p>地上でエネルギーとして使うには、燃料を高温のプラズマにし、その状態を安定して保つ必要があります。その方法や装置を探る研究が続いています。</p>
+          </div>
+        </div>
+      </section>
+
       <section class="content" id="about" aria-labelledby="about-title">
         <div class="section-head">
           <div>
@@ -275,6 +299,13 @@
             <h3>対話をひらく</h3>
             <p>教育・研究・産業など、異なる視点を持つ人たちが考えを交わすきっかけをつくります。</p>
           </article>
+        </div>
+        <div class="maker-note">
+          <div>
+            <p class="section-kicker">ABOUT THE CREATOR</p>
+            <h3>このページをつくる人</h3>
+          </div>
+          <p>Fusion Frontier Labの企画・制作を担当しています。核融合をわかりやすく伝えるため、研究の背景や社会とのつながりを紹介するページと体験型アプリをつくっています。</p>
         </div>
       </section>
 
