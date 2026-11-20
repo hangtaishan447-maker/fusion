@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e14">
+  <meta name="description" content="山﨑航太の卒業研究。核融合の背景や社会とのつながりを学び、ホームページと体験型アプリで伝える取り組みを紹介します。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="卒業研究について | Fusion Frontier">
+  <meta property="og:description" content="核融合を、知って・考えて・体験できる形に。">
+  <title>卒業研究について | Fusion Frontier</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080e14;
+      --ink: #f3f6f7;
+      --muted: #a8b6bf;
+      --line: rgba(203, 222, 230, .15);
+      --cyan: #75e3dc;
+      --lime: #d3f06b;
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; min-width: 320px; color: var(--ink);
+      background:
+        radial-gradient(ellipse at 75% 12%, rgba(39, 112, 120, .16), transparent 38rem),
+        radial-gradient(ellipse at 0% 64%, rgba(44, 75, 89, .13), transparent 34rem),
+        var(--bg);
+      font-family: Inter, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+      line-height: 1.75; -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    a:focus-visible { outline: 2px solid var(--lime); outline-offset: 5px; border-radius: 3px; }
+    .skip-link { position: absolute; left: 1rem; top: -4rem; z-index: 10; padding: .7rem 1rem; color: var(--bg); background: var(--lime); }
+    .skip-link:focus { top: 1rem; }
+    .wrap { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
+    .site-header { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 28px; border-bottom: 1px solid var(--line); }
+    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand-mark {
+      width: 38px; height: 38px; display: grid; place-items: center;
+      border: 1px solid rgba(117, 227, 220, .62); border-radius: 50%;
+      color: var(--cyan); font: 700 17px/1 Georgia, serif; box-shadow: inset 0 0 18px rgba(117, 227, 220, .12);
+    }
+    .brand-name { display: block; font-size: .88rem; font-weight: 700; letter-spacing: .13em; line-height: 1.2; }
+    .brand-caption { display: block; margin-top: 5px; color: var(--muted); font-size: .62rem; letter-spacing: .2em; }
+    .nav { display: flex; align-items: center; gap: 24px; }
+    .nav a { color: #c2cdd2; font-size: .8rem; text-decoration: none; }
+    .nav a:hover { color: var(--cyan); }
+    .nav .nav-cta { padding: 9px 16px; border: 1px solid rgba(117, 227, 220, .42); border-radius: 999px; color: var(--cyan); }
+    main { min-height: 70vh; }
+    .hero { padding: clamp(68px, 10vw, 126px) 0 78px; border-bottom: 1px solid var(--line); }
+    .eyebrow { display: flex; align-items: center; gap: 12px; margin: 0 0 22px; color: var(--cyan); font-size: .7rem; font-weight: 700; letter-spacing: .22em; }
+    .eyebrow::before { content: ""; width: 30px; height: 1px; background: var(--cyan); }
+    h1 { max-width: 760px; margin: 0; font-size: clamp(2.75rem, 7vw, 5.6rem); font-weight: 600; letter-spacing: -.065em; line-height: 1.18; }
+    h1 em { color: var(--lime); font-style: normal; }
+    .lead { max-width: 770px; margin: 26px 0 0; color: var(--muted); font-size: clamp(1rem, 1.5vw, 1.12rem); line-height: 2; }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin-top: 34px; }
+    .button {
+      display: inline-flex; min-height: 50px; align-items: center; justify-content: center; gap: 10px;
+      padding: 0 20px; border-radius: 4px; background: var(--lime); color: #10150a;
+      font-size: .86rem; font-weight: 750; text-decoration: none; transition: transform .2s ease, background .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); background: #e0fa8a; }
+    .text-link { color: #d2dcdf; font-size: .86rem; text-decoration: none; }
+    .text-link span { padding-left: 6px; color: var(--cyan); }
+    section.content { padding-block: 82px; }
+    .section-head { display: grid; grid-template-columns: .8fr 1.2fr; gap: 40px; align-items: end; margin-bottom: 36px; }
+    .section-kicker { margin: 0 0 12px; color: var(--cyan); font-size: .68rem; font-weight: 700; letter-spacing: .2em; }
+    h2 { margin: 0; font-size: clamp(1.9rem, 3.5vw, 3.15rem); font-weight: 550; letter-spacing: -.045em; line-height: 1.3; }
+    .section-intro { max-width: 650px; margin: 0; color: var(--muted); font-size: .96rem; line-height: 1.95; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card { min-height: 190px; padding: 25px; border: 1px solid var(--line); border-radius: 6px; background: linear-gradient(145deg, rgba(21, 35, 45, .93), rgba(12, 22, 29, .8)); }
+    .card-number { color: var(--cyan); font: 12px/1.4 ui-monospace, monospace; letter-spacing: .1em; }
+    .card h3 { margin: 22px 0 9px; font-size: 1.08rem; font-weight: 600; }
+    .card p { margin: 0; color: var(--muted); font-size: .86rem; line-height: 1.9; }
+    .profile {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px;
+      padding: 21px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    }
+    .profile-label { margin: 0 0 4px; color: var(--cyan); font-size: .64rem; font-weight: 700; letter-spacing: .18em; }
+    .profile-name { margin: 0; color: var(--ink); font-size: .95rem; font-weight: 600; }
+    .profile-school { margin: 2px 0 0; color: var(--muted); font-size: .78rem; }
+    footer { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 26px 0 34px; border-top: 1px solid var(--line); color: #83939c; font-size: .72rem; }
+    .footer-brand { color: #c8d3d8; letter-spacing: .12em; }
+    @media (max-width: 760px) {
+      .wrap { width: min(var(--max), calc(100% - 36px)); }
+      .site-header { align-items: flex-start; flex-direction: column; gap: 15px; padding-block: 18px; }
+      .nav { width: 100%; justify-content: space-between; gap: 10px; }
+      .nav a { font-size: .73rem; }
+      .nav .nav-cta { padding: 6px 10px; }
+      .hero { padding-block: 64px 56px; }
+      .section-head { grid-template-columns: 1fr; gap: 18px; margin-bottom: 28px; }
+      section.content { padding-block: 64px; }
+      .cards { grid-template-columns: 1fr; gap: 10px; }
+      .card { min-height: auto; padding: 22px; }
+      .card h3 { margin-top: 16px; }
+      footer { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Fusion Frontier ホーム">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><span class="brand-name">FUSION FRONTIER</span><span class="brand-caption">RESEARCH · EXPERIENCE · DIALOGUE</span></span>
+      </a>
+      <nav class="nav" aria-label="メインナビゲーション">
+        <a href="index.html#fusion">核融合とは</a>
+        <a href="index.html#about">プロジェクト</a>
+        <a class="nav-cta" href="index.html#experience">アプリを体験 ↗</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">GRADUATION RESEARCH</p>
+        <h1 id="hero-title">核融合を、<br><em>伝わる体験に。</em></h1>
+        <p class="lead">卒業研究では、核融合のしくみや研究の背景を学びながら、その内容をわかりやすく伝える方法を探っています。研究と社会のつながりを紹介するホームページと、核融合をテーマにした体験型アプリを制作しています。</p>
+        <div class="actions">
+          <a class="button" href="index.html#experience">アプリを体験する <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="index.html">ホームへ戻る <span aria-hidden="true">←</span></a>
+        </div>
+      </section>
+
+      <section class="content" aria-labelledby="theme-title">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">THE RESEARCH</p>
+            <h2 id="theme-title">調べて、伝えて、<br>体験につなぐ。</h2>
+          </div>
+          <p class="section-intro">核融合は、専門用語や実験装置の話だけでなく、社会や暮らしとどうつながるのかも大切なテーマです。研究の基本を整理し、初めて知る人にも伝わる形に整えることを目指しています。</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <span class="card-number">01 / LEARN</span>
+            <h3>研究の背景を知る</h3>
+            <p>核融合のしくみや、実現に向けて研究されている課題を調べます。</p>
+          </article>
+          <article class="card">
+            <span class="card-number">02 / COMMUNICATE</span>
+            <h3>わかりやすく伝える</h3>
+            <p>専門的な情報を整理し、核融合に初めて触れる人にも伝わる表現を考えます。</p>
+          </article>
+          <article class="card">
+            <span class="card-number">03 / EXPERIENCE</span>
+            <h3>体験できる形にする</h3>
+            <p>ホームページとアプリを制作し、読んで・触れて・考えられる入口をつくります。</p>
+          </article>
+        </div>
+      </section>
+
+      <div class="profile">
+        <div>
+          <p class="profile-label">RESEARCHER</p>
+          <p class="profile-name">山﨑 航太</p>
+          <p class="profile-school">筑波大学附属坂戸高等学校</p>
+        </div>
+        <a class="text-link" href="index.html#about">プロフィールを見る <span aria-hidden="true">→</span></a>
+      </div>
+    </main>
+
+    <footer>
+      <span class="footer-brand">FUSION FRONTIER LAB</span>
+      <span>卒業研究 · 核融合を、伝わる体験に。</span>
+      <span>© Fusion Frontier Lab</span>
+    </footer>
+  </div>
+</body>
+</html>
